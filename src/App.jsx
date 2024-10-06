@@ -1,3 +1,14 @@
+import silueta from './assets/silueta.png'
+import homemMagro from './assets/homem-magro.png'
+import homemNormal from './assets/homem-normal.png'
+import homemObeso from './assets/homem-obeso.png'
+import homemObeso2 from './assets/homem-obeso-2.png'
+
+import mulherMagra from './assets/mulher-magra.png'
+import mulherNormal from './assets/mulher-normal.png'
+import mulherObeso from './assets/mulher-obesa.png'
+import mulherObeso2 from './assets/mulher-obesa-2.png'
+
 import { useState } from 'react'
 
 export function App() {
@@ -5,7 +16,7 @@ export function App() {
   const [weight, setWeight] = useState("50");
   const [imc, setIMC] = useState("??.??");
   const [imcRating, setIMCRating] = useState("");
-  const [image, setImage] = useState("./src/assets/silueta.png");
+  const [image, setImage] = useState(silueta);
   const [sex, setSex] = useState("");
 
   const heightInMeters = heightInCentimetris / 100
@@ -18,43 +29,43 @@ export function App() {
 
     if(IMC < 17) {
       setIMCRating("Muito abaixo do peso");
-      setImage(`./src/assets/${sex === 'M' ? 'homem' : 'mulher'}-magro.png`);
+      setImage(sex === 'M' ? homemMagro : mulherMagra);
       return
     }
 
     if(IMC < 18.5) {
       setIMCRating("Abaixo do peso");
-      setImage(`./src/assets/${sex === 'M' ? 'homem' : 'mulher'}-magro.png`);
+      setImage(sex === 'M' ? homemMagro : mulherMagra);
       return
     }
 
     if(IMC >= 18.5 && IMC <= 24.9) {
       setIMCRating("Peso normal");
-      setImage(`./src/assets/${sex === 'M' ? 'homem' : 'mulher'}-normal.png`);
+      setImage(sex === 'M' ? homemNormal : mulherNormal);
       return
     }
 
     if(IMC >= 25 && IMC <= 29.9) {
       setIMCRating("Sobrepeso");
-      setImage(`./src/assets/${sex === 'M' ? 'homem' : 'mulher'}-magro.png`);
+      setImage(sex === 'M' ? homemObeso : mulherObeso);
       return
     }
 
     if(IMC >= 30 && IMC <= 34.9) {
       setIMCRating("Obesidade grau 1");
-      setImage(`./src/assets/${sex === 'M' ? 'homem' : 'mulher'}-obeso.png`);
+      setImage(sex === 'M' ? homemObeso : mulherObeso);
       return
     }
 
     if(IMC >= 35 && IMC <= 39.9) {
       setIMCRating("Obesidade grau 2");
-      setImage(`./src/assets/${sex === 'M' ? 'homem' : 'mulher'}-obeso-2.png`);
+      setImage(sex === 'M' ? homemObeso2 : mulherObeso2);
       return
     }
 
     if(IMC >= 40) {
       setIMCRating("Obesidade grau 3");
-      setImage(`./src/assets/${sex === 'M' ? 'homem' : 'mulher'}-obeso-2.png`);
+      setImage(sex === 'M' ? homemObeso2 : mulherObeso2);
       return
     }
 
