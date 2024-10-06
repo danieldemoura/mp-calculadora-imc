@@ -1,8 +1,60 @@
-# React + Vite
+Nada melhor do que manter a saúde em dia, não é? Sendo o IMC uma medida internacional usada para calcular se uma pessoa está no peso ideal, a nossa calculadora de Índice de Massa Corporal (IMC) é perfeita para isso.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔨 Requisitos
 
-Currently, two official plugins are available:
+- Desenvolva a aplicação utilizando Vite + React;
+- Sua calculadora deve possuir:
+  - Input para informar o peso em *kg*;
+  - Input para informar a altura em *cm*;
+  - Botão para realizar o cálculo;
+- Como resultado, mostre uma tabela com as principais informações: peso, altura, IMC e resultado (como exemplo, para o IMC de 22.04, o resultado é Peso Normal);
+- Os campos devem ser resetados e desabilitados após o cálculo, e o botão deve mudar de "Calcular" para "Refazer";
+- Ao clicar em "Refazer", a tabela deve desaparecer e os campos devem ser novamente habilitados.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Dicas
+
+- Procure entender como lidar com números flutuantes;
+- É muito importante saber a convenção para separação de números decimais em JavaScript;
+- Dê uma olhada na API `Intl` do JavaScript, ela poderá te ajudar;
+- Utilize condicionais para os resultados caso julgue necessário!
+
+## 🎨 Design Sugerido
+
+Temos uma sugestão de design no Figma. Entretanto, fique à vontade para montar a aplicação conforme a sua criatividade.
+
+### Figma
+🔗 [Link do design](https://www.figma.com/community/file/1314580663583006642/mini-projeto-calculadora-de-imc)
+![Desktop - Calcular](https://github.com/user-attachments/assets/13ce261a-2ad1-444c-8aab-e8912af07834)
+
+## 🎨 Design feito por mim
+
+Eu criei um design próprio, onde usei como inspiração um design do Dribble<br/>
+Design de inspiração: [Dribble](https://dribbble.com/shots/3726070-IMC-Calculator/attachments/9985736?mode=media)<br/>
+**Meu design final é esse do vídeo:**<br/>
+<video src="https://github.com/user-attachments/assets/2b7001a3-47ea-48da-b77d-a8470fb80fe5" controls></video>
+
+## 💻 Tecnologias que eu utilizei:
+- ReactJS
+- Tailwindcss
+- SeaArt AI
+  - Utilizado para gerar as imagens dos personagens do preview
+
+
+## 👉🏽 Sobre esse mini-projeto
+
+### O que você irá praticar:
+
+#### Vite
+
+- Setup de um projeto React com Vite
+- Estrutura básica de um projeto React
+
+#### React e JS
+
+- Estado e Eventos com React
+- Formulários controlados com React
+- Números flutuantes com JavaScript
+
+#### TailwindCSS
+
+- Prática com o Framework
