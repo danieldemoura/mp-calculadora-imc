@@ -1,4 +1,4 @@
-export const InputRange = ({ value, setHeightInCentimetris, setWeight, ...props }) => {
+export const InputRange = ({ value, setHeightInCentimetris, setWeightInGrams, ...props }) => {
 
 	function handleRange(event) {
 	    if(event.target.name === 'height') {
@@ -6,14 +6,13 @@ export const InputRange = ({ value, setHeightInCentimetris, setWeight, ...props 
 	      return
 	    }
 
-	    setWeight(event.target.value);
+	    setWeightInGrams(event.target.value);
   	}
 
 	return (
 		<input 
 			className="w-full" 
 			type="range"  
-			step="1" 
 			value={value}
 			onChange={handleRange}
 			required
