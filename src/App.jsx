@@ -2,9 +2,10 @@ import silueta from './assets/silueta.png'
 
 import { useState } from 'react'
 import { Form } from './components/Form'
+import { getFormattedIMC } from './utils/IMC'
 
 export function App() {
-  const [imc, setIMC] = useState("??.??");
+  const [imc, setIMC] = useState(null);
   const [imcRating, setIMCRating] = useState("");
   const [image, setImage] = useState(silueta);
 
@@ -15,7 +16,9 @@ export function App() {
           <figcaption className="absolute left-0 bottom-0 w-full h-[193px] flex flex-col justify-between items-center text-white bg-[#00000080] backdrop-blur-[5px] rounded-l-[32px] rounded-r-[32px] py-6">
             <div>
               <h1 className="uppercase text-[28px] text-center">Seu IMC é:</h1>
-              <h2 className="text-[3.5rem] font-bold mt-[-18px]">{imc}</h2>
+              <h2 className="text-[3.5rem] text-center font-bold mt-[-18px]">
+                { imc ? getFormattedIMC(imc) : "??.??"}
+              </h2>
             </div>
             <p className="text-[1.5rem]">{imcRating}</p>
           </figcaption>
